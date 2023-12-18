@@ -1,0 +1,19 @@
+//Two Sum- Vladimir Basarab in JAVA 
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        //if any of the array indices equal target return index of those two numbers
+        int[] outcome = new int[2];
+
+         for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target) {
+                    System.out.println("The two numbers are " + nums[i] + " and " + nums[j]);
+                    outcome[0] = i; 
+                    outcome[1] = j;
+                }
+            }
+        }
+        return outcome;
+    }
+}
