@@ -1,0 +1,15 @@
+Vladimir Basarab in JAVA
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        Arrays.sort(nums);                                          // sort in order to be able to find adjacent duplicates
+        
+        int i = 0;                                                  // for exercise purposes i start at 0 
+        for (int j =1; j < nums.length; j++) {                      //iterate through array
+            if (nums[j] != nums[i]) {                               //if the current element j is different from the previous element that starts at 0
+                i++; //increment to avoid outofbounds error
+                nums[i] = nums[j];                                  //set i equal to j 
+                
+            }
+        }return i + 1;                                              //return + 1 to calibrate the algorithm
+    }  
+}
